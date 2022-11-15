@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../new_project/Bootstrap/css/bootstrap.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .w-5 {
+  width: 5% !important;
+}
+
+.ms-7{
+  margin-left: 300px;
+}
+
+.me-7{
+  margin-right: 300px;
+}
+  </style>
+
+   <title>Bootstrap Example</title>
+</head>
+
+<body class="bg-info">
+  <center class="container mt-5">
+<form action="">
+<label class="fw-bolder">First Number</label class="fw-bolder">
+<input type="number" name="" id="first"  class="w-25"> 
+<p class="fw-bolder fs-5  rounded w-50 p-2 d-inline ms-2" id="rd1"></p> <br> <br>
+
+
+<label class="fw-bolder">Second Number</label class="fw-bolder">
+<input type="number" name="" id="second"  class="w-25"> 
+<p class="fw-bolder fs-5  rounded w-50 p-2 d-inline ms-2" id="rd2"></p> <br> <br>
+
+<label class="fw-bolder">Third Number</label class="fw-bolder">
+<input type="number" name="" id="third"  class="w-25">
+<p class="fw-bolder fs-5  rounded w-50 p-2 d-inline ms-2" id="rd3"></p> <br> <br>
+
+<label class="fw-bolder">fourth Number</label class="fw-bolder">
+<input type="number" name="" id="fourth"  class="w-25">
+<p class="fw-bolder fs-5  rounded w-50 p-2 d-inline ms-2" id="rd4"></p> <br> <br>
+</form>
+
+<!-- <p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p> -->
+
+
+
+<span class="btn btn-danger my-2" id="submit" onclick="add()">Submit</span>
+
+<div class="row">
+  <div class="col">
+<p class="fw-bolder fs-5 border border-danger rounded  w-50 ms-7 p-2 " id="result1"></p>
+</div>
+
+<div class="col">
+<p class="fw-bolder fs-5 w-25 me-7 p-2" id="result"></p>
+</div>
+</div>
+
+</center>
+
+
+<script>
+
+  function add(){
+  
+const inputs = []
+
+inputs [0] =parseFloat(document.getElementById('first').value);
+document.getElementById('rd1').innerHTML = Number.isInteger(inputs[0]);
+
+
+
+inputs [1] = parseFloat(document.getElementById('second').value);
+document.getElementById('rd2').innerHTML = Number.isInteger(inputs[1]);
+
+
+inputs [2] = parseFloat(document.getElementById('third').value);
+document.getElementById('rd3').innerHTML = Number.isInteger(inputs[2]);
+
+inputs [3] = parseFloat(document.getElementById('fourth').value);
+document.getElementById('rd4').innerHTML = Number.isInteger(inputs[3]);
+
+
+document.getElementById("result").innerHTML = Number.isSafeInteger(inputs[0] + inputs[1] + inputs[2] + inputs[3])  ;
+
+document.getElementById("result1").innerHTML = inputs[0] + inputs[1] + inputs[2] + inputs[3];
+
+}
+</script>
+</body>
+</html>
